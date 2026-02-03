@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# Cómo crear un nuevo proyecto con React + Vite + Typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Crear la carpeta del proyecto
 
-Currently, two official plugins are available:
+Primero debemos tener una carpeta donde estarán alojados todos los repositorios que creemos. También deberemos tener instalado Node.js y Visual Code Studio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Abrimos dicha carpeta en Visual Code Studio y desde la terminal (Ctrl+Shift+Ñ) e introducimos el siguiente comando:
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+> npm create vite@latest nombre_proyecto
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Si no tenemos Vite instalado tendremos que hacerlo escribiendo "y" + Enter.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Luego nos pedirá elegir el framework para el proyecto. Con las flechas nos movemos a la opción React y la elegimos con Enter. Por último, seleccionamos Typescript. 
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+## Ejecutar el proyecto
+
+Una vez creado, nos movemos al directorio del proyecto creado con:
+
 ```
+> cd nombre_proyecto
+```
+
+Ejecutamos el comando de instalación:
+
+```
+> npm install
+```
+
+Una vez instaladas las dependencias, ejecutamos el comando de desarrollo y ya podemos empezar a trabajar.
+
+```
+> npm run dev
+
+  VITE v7.3.1  ready in 559 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+
+```
+
+Para ver el proyecto abrimos el link de localhost con Ctrl+Clic
+
+
+
+
